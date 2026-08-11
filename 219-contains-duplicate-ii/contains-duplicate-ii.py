@@ -3,7 +3,7 @@ class Solution:
         n = len(nums)
         if n == len(set(nums)):
             return False
-            
+
         seen = {}
         ans = False
 
@@ -11,8 +11,7 @@ class Solution:
             if nums[i] in seen:
                 temp = abs(seen[nums[i]] - i)
                 if temp <= k:
-                    ans = True
-                    return ans
+                    return True
 
             seen[nums[i]] = i
         
