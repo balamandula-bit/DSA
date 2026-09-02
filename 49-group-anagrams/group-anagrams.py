@@ -7,8 +7,5 @@ class Solution:
             temp = sorted(strs[i])
             temp = "".join(temp)
             group.setdefault(temp, []).append(strs[i])
-        
-         
-        return list(group.values())
 
-        
+        return list(group.values())
