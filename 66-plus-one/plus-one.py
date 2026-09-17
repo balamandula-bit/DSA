@@ -1,16 +1,15 @@
 class Solution:
-    def plusOne(self, digits: List[int]) -> List[int]:
-        num = 0
-        ans = []
-        for i in digits:
-            num = i + (num  * 10)
+    def plusOne(self, digits: list[int]) -> list[int]:
+        ans = 0
+        for num in digits:
+            ans = (ans * 10) + num
         
-        num += 1
-        while num > 0:
-            digit = num % 10
-            ans.append(digit)
-            num //= 10
+        ans = ans + 1
+        li = []
         
-        return ans[::-1]
-
+        while ans > 0:
+            digit = ans % 10
+            li.append(digit)
+            ans //= 10
         
+        return li[::-1]
