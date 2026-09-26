@@ -12,5 +12,6 @@ class Solution:
         for i in range(n-1, -1, -1):
             ans[i] *= right_prod
             right_prod *= nums[i]
-        
+
+
         return ans
