@@ -1,22 +1,20 @@
 class Solution:
     def isHappy(self, n: int) -> bool:
-        seen = set()
-
+        dictionary = {}
         while n != 1:
-            if n in seen:
-                return False
-            
-            seen.add(n)
-
-            total = 0
+            num = 0
             while n > 0:
                 digit = n % 10
-                total += digit * digit
+                num += digit ** 2
                 n //= 10
-            
-            n = total
+
+            if num in dictionary:
+                return False
+            else:
+                dictionary[num] = 1
+            n = num
         
         return True
-    
 
-            
+
+        
